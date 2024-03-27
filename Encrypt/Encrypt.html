@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CipherCraft</title>
+    <!--CSS-->
+    <!--Cách 1-->
+    <!--<style>
+        pre{
+            background-color: yellow;
+        }
+    </style>-->
+
+    <!--Cách 2-->
+    <link type="text/css" rel="stylesheet" href="Encrypt.css">
+    <script src = "Encrypt.js" defer></script>
+</head>
+    <!--Header-->
+    <div id="Header">
+        <h1>Cipher Craft</h1>
+    </div>
+
+    <!--Navigation Bar-->
+    <div class="navbar">
+        <ul class="navbar">
+            <li><a href="..\Encrypt\Encrypt.html" class="navbar-en shared-hover">Encrypt</a></li>
+            <li><a href="..\Decrypt\Decrypt.html" class="navbar-de shared-hover">Decrypt</a></li>
+        </ul>
+    </div>
+
+    <!--Choose the type of cipher-->
+    <div class="type-cipher">
+        <form>
+            <label class="type-cipher" for="type">Choose your type of cipher:</label>
+            <select class="type-cipher" id="type" name="type" onchange="handleChange(this)">
+                <option value="Shift">Shift Cipher</option>
+                <option value="Affine">Affine Cipher</option>
+                <option value="Vig">Vigenère Cipher</option>
+                <option value="Rail">RailFence Cipher</option>
+            </select>
+        </form>
+    </div>
+
+    <!-------------------------------------------------------------------Shift Cipher---------------------------------------------------------->
+    <!--Choose key-->
+    <div class="choose-key" id="Shift">
+        <form>
+            <label class="choose-key">Choose your key:</label>
+            <select id="select-key" class="select-key"></select>
+        </form>
+        
+    </div>
+
+    <!-------------------------------------------------------------------Affine Cipher---------------------------------------------------------->
+    <!--Choose key-->
+    <div class="choose-key" id="Affine">
+        <form>
+            <label class="choose-key">Choose your first key:</label>
+            <select id="first-key" class="first-key"></select>
+            <label class="choose-key">Choose your second key:</label>
+            <select id="second-key" class="second-key"></select>
+        </form>
+    </div>
+
+    <!------------------------------------------------------------------Vigenère Cipher--------------------------------------------------------->
+    <div class="choose-key" id="Vig">
+        <form>
+            <label class="choose-key">Enter your key (string):</label>
+            <input type="password" placeholder="Enter your key" id="Vig-psw">
+        </form>
+    </div>
+
+    <!------------------------------------------------------------------RailFence Cipher-------------------------------------------------------->
+    <div class="choose-key" id="Rail">
+        <form>
+            <label class="choose-key" id="RailFence"></label><br>
+            <input type="password" placeholder="Enter your key" id="Rail-psw">
+        </form>
+    </div>
+
+    <!--Enter the text-->
+    <div class="body-form">
+        <form>
+            <label class="body-form">Your Original Text:</label><br>
+            <textarea class="text" type="text" id="plaintext" name="plaintext" rows="8" onblur="getTextLength()"></textarea><br>
+            <div class="button">
+                <button type="button" class="button" id="encrypt">Encrypt</button><br>
+            </div>
+            <label class="body-form">The Encrypted Text:</label><br>
+            <textarea class="text" type="text" id="ciphertext" name="ciphertext" rows="8" readonly></textarea><br>
+            <div class="button">
+                <button type="button" class="button" id="copy">Copy</button><br>
+            </div>
+        </form>
+    </div>
+    
+<body>
+        
+</body>
+</html>

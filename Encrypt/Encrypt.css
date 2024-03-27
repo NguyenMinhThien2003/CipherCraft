@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'LemonMilk';
+    src: url('LemonMilk.otf') format('truetype');
+    /* You can include additional formats for better browser support */
+  }
+
+body{
+    background-color: #E5F9FB;
+}
+
+#Header{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+h1{
+    font-size: 50px;
+    color: #E96E5E;
+    font-family: 'LemonMilk', Times, sans-serif;
+}
+
+.navbar ul{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    flex: 1;
+    display: inline-block;
+}
+
+.navbar-en {
+    text-decoration: none;
+    background-color: #229CCC;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: 'LemonMilk', Times, sans-serif;
+    border-bottom-left-radius: 15px;
+}
+
+.navbar-de {
+    text-decoration: none;
+    background-color: #229CCC;
+    color: #fff;
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 40px;
+    font-family: 'LemonMilk', Times, sans-serif;
+    border-bottom-right-radius: 15px;
+}
+
+.shared-hover:hover{
+    background-color: #6cddeb;
+}
+
+.type-cipher, .body-form, .choose-key, .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-cipher, .choose-key label{
+    margin-top: 15px;
+}
+
+label{
+    text-align: center;
+}
+
+.type-cipher select{
+    text-align: center;
+}
+
+.select-key, .first-key, .second-key{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+}
+
+input, textarea, select{
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background: transparent;
+    border: 1px solid #229CCC;
+    border-radius: 10px;
+    padding: 10px;
+    resize: none;
+    width: 500px;
+}
+
+select:focus{
+    border-color:#229CCC;
+    outline: none;
+}
+
+textarea:focus{
+    border-color:#229CCC;
+    outline: none;
+}
+
+.button button{
+    font-family: 'LemonMilk', Times, sans-serif;
+    color: white;
+    font-size: 30px;
+    background-color: #229CCC;
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+}
+
+.button button:hover{
+    color: black;
+    background-color: #6cddeb;
+    border-radius: 10px;
+    height: 40px;
+    width: 100px;
+}
+
+.hidden{
+    display: none;
+}
